@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  TestPixelAppDb:
+    image: postgres:16.1
+    container_name: pixel-db
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=pixel
+      - POSTGRES_USER=pixel
+      - POSTGRES_DB=pixel
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
