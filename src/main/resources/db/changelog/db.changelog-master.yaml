@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+    id: 1
+    author: aperminov
+    changes:
+      -sqlFile:
+        patch: changes/v001_create_user_table.sql
+        relativeToChangelogFile: true
+        comments: "create table users"

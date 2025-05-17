@@ -1,0 +1,11 @@
+server:
+  ssl:
+    enabled: false
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pixel
+    username: pixel
+    password: pixel
+    driver-class-name: org.postgresql.Driver
